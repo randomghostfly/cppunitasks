@@ -14,8 +14,9 @@ std::vector<int> delete_zeroes(std::vector<int> vec) {
     return vec;
 }
 
-void delete_col(std::vector<std::vector<int>> matrix) {
+void delete_col(std::vector<std::vector<int>>& matrix) {
     std::unordered_set<int> col;
+    int count = 0;
     for (int i = 0; i < matrix.size(); i++) {
         for (int j = 0; j < matrix[i].size(); j++) {
             if (matrix[i][j] == 0) {
@@ -26,7 +27,8 @@ void delete_col(std::vector<std::vector<int>> matrix) {
 
     for (int elem : col) {
         for (int i = 0; i < matrix.size(); i++) {
-            matrix[i].erase(matrix[i].begin()+elem);
+            matrix[i].erase(matrix[i].begin()+elem-count);
         }
+        count++;
     }
 }
