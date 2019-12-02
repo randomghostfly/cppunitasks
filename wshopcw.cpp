@@ -29,11 +29,4 @@ void delete_col(std::vector<std::vector<int>> matrix) {
             matrix[i].erase(matrix[i].begin()+elem);
         }
     }
-
-    for (int i = 0; i < matrix.size(); i++) {
-        for (int j = 0; j < matrix[i].size(); j++) {
-            std::cout << matrix[i][j] << ' ';
-        }
-        std::cout << std::endl;
-    }
 }
