@@ -1,6 +1,6 @@
 #include <vector>
 #include <iostream>
-#include <unordered_set>
+#include <set>
 
 std::vector<int> delete_zeroes(std::vector<int> vec) {
     int new_index = 0;
@@ -15,7 +15,7 @@ std::vector<int> delete_zeroes(std::vector<int> vec) {
 }
 
 void delete_col(std::vector<std::vector<int>>& matrix) {
-    std::unordered_set<int> col;
+    std::set<int> col;
     int count = 0;
     for (int i = 0; i < matrix.size(); i++) {
         for (int j = 0; j < matrix[i].size(); j++) {
@@ -31,4 +31,5 @@ void delete_col(std::vector<std::vector<int>>& matrix) {
         }
         count++;
     }
+    
 }
